@@ -1,6 +1,8 @@
 #ifndef __HTTP_CLIENT_H_
 #define __HTTP_CLIENT_H_
 
+#define LOGGING 1
+
 #include "application.h"
 #include "spark_wiring_string.h"
 #include "spark_wiring_tcpclient.h"
@@ -110,7 +112,7 @@ public:
     {
         request(aRequest, aResponse, headers, HTTP_METHOD_DELETE);
     }
-	
+
     void patch(http_request_t &aRequest, http_response_t &aResponse, http_header_t headers[])
     {
         request(aRequest, aResponse, headers, HTTP_METHOD_PATCH);
